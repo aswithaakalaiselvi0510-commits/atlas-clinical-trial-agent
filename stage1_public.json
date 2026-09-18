@@ -1,0 +1,480 @@
+[
+  {
+    "question_id": "Q01",
+    "question": "Which subjects meet the potential Hy's law criteria?",
+    "category": "FINDING",
+    "answer": [
+      "042-S05-003",
+      "042-S07-001",
+      "042-S08-014"
+    ],
+    "evidence": [
+      {
+        "domain": "LB",
+        "usubjid": "042-S05-003",
+        "sequence": 18,
+        "visit": "WEEK8",
+        "test": "ALT",
+        "date": "2026-04-12",
+        "value": "195.0",
+        "normalized_value": "195.0",
+        "unit": "U/L",
+        "normalized_unit": "U/L",
+        "reference_range": "ULN: 56.0 U/L",
+        "calculation": "195.0 U/L > 3\u00d7ULN (168.0 U/L) \u2713",
+        "reason": "ALT elevated > 3\u00d7ULN at visit WEEK8"
+      },
+      {
+        "domain": "LB",
+        "usubjid": "042-S05-003",
+        "sequence": 19,
+        "visit": "WEEK8",
+        "test": "BILI",
+        "date": "2026-04-12",
+        "value": "3.10",
+        "normalized_value": "3.1",
+        "unit": "mg/dL",
+        "normalized_unit": "mg/dL",
+        "reference_range": "ULN: 1.2 mg/dL",
+        "calculation": "3.1 mg/dL > 2\u00d7ULN (2.4 mg/dL) \u2713",
+        "reason": "Total Bilirubin elevated > 2\u00d7ULN at visit WEEK8"
+      },
+      {
+        "domain": "LB",
+        "usubjid": "042-S07-001",
+        "sequence": 25,
+        "visit": "WEEK8",
+        "test": "ALT",
+        "date": "2026-03-30",
+        "value": "3.995",
+        "normalized_value": "239.7",
+        "unit": "ukat/L",
+        "normalized_unit": "U/L",
+        "reference_range": "ULN: 56.0 U/L",
+        "calculation": "3.995 ukat/L \u00d7 60 = 239.7 U/L \u2192 239.7 U/L > 3\u00d7ULN (168.0 U/L) \u2713",
+        "reason": "ALT elevated > 3\u00d7ULN at visit WEEK8"
+      },
+      {
+        "domain": "LB",
+        "usubjid": "042-S07-001",
+        "sequence": 27,
+        "visit": "WEEK8",
+        "test": "BILI",
+        "date": "2026-03-30",
+        "value": "5.38",
+        "normalized_value": "5.38",
+        "unit": "mg/dL",
+        "normalized_unit": "mg/dL",
+        "reference_range": "ULN: 1.2 mg/dL",
+        "calculation": "5.38 mg/dL > 2\u00d7ULN (2.4 mg/dL) \u2713",
+        "reason": "Total Bilirubin elevated > 2\u00d7ULN at visit WEEK8"
+      },
+      {
+        "domain": "LB",
+        "usubjid": "042-S08-014",
+        "sequence": 31,
+        "visit": "WEEK8",
+        "test": "ALT",
+        "date": "2026-05-02",
+        "value": "182.5",
+        "normalized_value": "182.5",
+        "unit": "U/L",
+        "normalized_unit": "U/L",
+        "reference_range": "ULN: 56.0 U/L",
+        "calculation": "182.5 U/L > 3\u00d7ULN (168.0 U/L) \u2713",
+        "reason": "ALT elevated > 3\u00d7ULN at visit WEEK8"
+      },
+      {
+        "domain": "LB",
+        "usubjid": "042-S08-014",
+        "sequence": 32,
+        "visit": "WEEK8",
+        "test": "BILI",
+        "date": "2026-05-06",
+        "value": "2.85",
+        "normalized_value": "2.85",
+        "unit": "mg/dL",
+        "normalized_unit": "mg/dL",
+        "reference_range": "ULN: 1.2 mg/dL",
+        "calculation": "2.85 mg/dL > 2\u00d7ULN (2.4 mg/dL) \u2713",
+        "reason": "Total Bilirubin elevated > 2\u00d7ULN at visit WEEK8"
+      }
+    ],
+    "confidence": 1.0,
+    "explanation": "Found 3 subjects meeting protocol-defined potential Hy's Law criteria (ALT/AST > 3\u00d7ULN and Total Bilirubin > 2\u00d7ULN within 14 days without cholestasis): 042-S05-003, 042-S07-001, 042-S08-014. Calculations: Subject 042-S05-003: 195.0 U/L > 3\u00d7ULN (168.0 U/L) \u2713 | 3.1 mg/dL > 2\u00d7ULN (2.4 mg/dL) \u2713; Subject 042-S07-001: 3.995 ukat/L \u00d7 60 = 239.7 U/L \u2192 239.7 U/L > 3\u00d7ULN (168.0 U/L) \u2713 | 5.38 mg/dL > 2\u00d7ULN (2.4 mg/dL) \u2713; Subject 042-S08-014: 182.5 U/L > 3\u00d7ULN (168.0 U/L) \u2713 | 2.85 mg/dL > 2\u00d7ULN (2.4 mg/dL) \u2713.",
+    "reasoning": "Evaluated transaminase elevations > 3x ULN with compatible unit conversions, concurrent with total bilirubin > 2x ULN within 14 days, ruling out cholestatic ALP elevation.",
+    "execution_time_seconds": 0.00084
+  },
+  {
+    "question_id": "Q02",
+    "question": "How many subjects at site S07 discontinued due to an adverse event?",
+    "category": "COUNT",
+    "answer": 2,
+    "evidence": [
+      {
+        "domain": "DS",
+        "usubjid": "042-S07-001",
+        "sequence": 1,
+        "date": "2026-03-31",
+        "value": "DISCONTINUED DUE TO HEPATOTOXICITY",
+        "reason": "Subject discontinued study treatment due to adverse event (DISCONTINUED DUE TO HEPATOTOXICITY)"
+      },
+      {
+        "domain": "DS",
+        "usubjid": "042-S07-004",
+        "sequence": 1,
+        "date": "2026-03-05",
+        "value": "DISCONTINUED DUE TO GENERALIZED RASH",
+        "reason": "Subject discontinued study treatment due to adverse event (DISCONTINUED DUE TO GENERALIZED RASH)"
+      },
+      {
+        "domain": "AE",
+        "usubjid": "042-S07-001",
+        "sequence": 1,
+        "date": "2026-03-30",
+        "value": "HEPATOTOXICITY",
+        "reason": "Causal adverse event record: HEPATOTOXICITY (SEVERE)"
+      }
+    ],
+    "confidence": 1.0,
+    "explanation": "2 unique subjects at site S07 discontinued due to an adverse event: 042-S07-001, 042-S07-004.",
+    "reasoning": "Identified disposition records specifying discontinuation for adverse events among unique subjects at site S07.",
+    "execution_time_seconds": 0.00021
+  },
+  {
+    "question_id": "Q03",
+    "question": "List the laboratory and adverse-event records for 042-S05-003 within 7 days of the WEEK8 visit.",
+    "category": "LOOKUP",
+    "answer": [
+      {
+        "domain": "LB",
+        "usubjid": "042-S05-003",
+        "sequence": 18,
+        "visit": "WEEK8",
+        "test": "ALT",
+        "date": "2026-04-12",
+        "value": "195.0",
+        "normalized_value": "195.0",
+        "unit": "U/L",
+        "normalized_unit": "U/L",
+        "reason": "Laboratory test ALT on 2026-04-12 within 7 days of WEEK8 (2026-04-12)"
+      },
+      {
+        "domain": "LB",
+        "usubjid": "042-S05-003",
+        "sequence": 19,
+        "visit": "WEEK8",
+        "test": "BILI",
+        "date": "2026-04-12",
+        "value": "3.10",
+        "normalized_value": "3.1",
+        "unit": "mg/dL",
+        "normalized_unit": "mg/dL",
+        "reason": "Laboratory test BILI on 2026-04-12 within 7 days of WEEK8 (2026-04-12)"
+      },
+      {
+        "domain": "LB",
+        "usubjid": "042-S05-003",
+        "sequence": 20,
+        "visit": "WEEK8",
+        "test": "ALP",
+        "date": "2026-04-12",
+        "value": "95.0",
+        "normalized_value": "95.0",
+        "unit": "U/L",
+        "normalized_unit": "U/L",
+        "reason": "Laboratory test ALP on 2026-04-12 within 7 days of WEEK8 (2026-04-12)"
+      },
+      {
+        "domain": "LB",
+        "usubjid": "042-S05-003",
+        "sequence": 21,
+        "visit": "WEEK8",
+        "test": "AST",
+        "date": "2026-04-15",
+        "value": "145.0",
+        "normalized_value": "145.0",
+        "unit": "U/L",
+        "normalized_unit": "U/L",
+        "reason": "Laboratory test AST on 2026-04-15 within 7 days of WEEK8 (2026-04-12)"
+      },
+      {
+        "domain": "AE",
+        "usubjid": "042-S05-003",
+        "sequence": 4,
+        "date": "2026-04-14",
+        "value": "NAUSEA",
+        "reason": "Adverse event NAUSEA starting on 2026-04-14 within 7 days of WEEK8 (2026-04-12)"
+      }
+    ],
+    "evidence": [
+      {
+        "domain": "LB",
+        "usubjid": "042-S05-003",
+        "sequence": 18,
+        "visit": "WEEK8",
+        "test": "ALT",
+        "date": "2026-04-12",
+        "value": "195.0",
+        "normalized_value": "195.0",
+        "unit": "U/L",
+        "normalized_unit": "U/L",
+        "reason": "Laboratory test ALT on 2026-04-12 within 7 days of WEEK8 (2026-04-12)"
+      },
+      {
+        "domain": "LB",
+        "usubjid": "042-S05-003",
+        "sequence": 19,
+        "visit": "WEEK8",
+        "test": "BILI",
+        "date": "2026-04-12",
+        "value": "3.10",
+        "normalized_value": "3.1",
+        "unit": "mg/dL",
+        "normalized_unit": "mg/dL",
+        "reason": "Laboratory test BILI on 2026-04-12 within 7 days of WEEK8 (2026-04-12)"
+      },
+      {
+        "domain": "LB",
+        "usubjid": "042-S05-003",
+        "sequence": 20,
+        "visit": "WEEK8",
+        "test": "ALP",
+        "date": "2026-04-12",
+        "value": "95.0",
+        "normalized_value": "95.0",
+        "unit": "U/L",
+        "normalized_unit": "U/L",
+        "reason": "Laboratory test ALP on 2026-04-12 within 7 days of WEEK8 (2026-04-12)"
+      },
+      {
+        "domain": "LB",
+        "usubjid": "042-S05-003",
+        "sequence": 21,
+        "visit": "WEEK8",
+        "test": "AST",
+        "date": "2026-04-15",
+        "value": "145.0",
+        "normalized_value": "145.0",
+        "unit": "U/L",
+        "normalized_unit": "U/L",
+        "reason": "Laboratory test AST on 2026-04-15 within 7 days of WEEK8 (2026-04-12)"
+      },
+      {
+        "domain": "AE",
+        "usubjid": "042-S05-003",
+        "sequence": 4,
+        "date": "2026-04-14",
+        "value": "NAUSEA",
+        "reason": "Adverse event NAUSEA starting on 2026-04-14 within 7 days of WEEK8 (2026-04-12)"
+      }
+    ],
+    "confidence": 1.0,
+    "explanation": "Found 5 records (labs and adverse events) for subject 042-S05-003 within \u00b17 days of WEEK8 (anchor date: 2026-04-12).",
+    "reasoning": "Calculated date interval [2026-04-05 to 2026-04-19] centered on WEEK8 (2026-04-12) and matched active source records.",
+    "execution_time_seconds": 0.00068
+  },
+  {
+    "question_id": "Q04",
+    "question": "Which subjects at site S01 received a wrong dose?",
+    "category": "TRAP",
+    "answer": [],
+    "evidence": [],
+    "confidence": 1.0,
+    "explanation": "No subjects at site S01 received a wrong dose. All verified dosing records confirm compliant protocol administration.",
+    "reasoning": "Queried all EX dosing records for subjects at site S01; confirmed zero dosing errors.",
+    "execution_time_seconds": 3e-05
+  },
+  {
+    "question_id": "Q05",
+    "question": "How many subjects were enrolled across all sites?",
+    "category": "COUNT",
+    "answer": 23,
+    "evidence": [
+      {
+        "domain": "DM",
+        "usubjid": "042-S01-001",
+        "sequence": 1,
+        "reason": "Enrolled study subject record"
+      },
+      {
+        "domain": "DM",
+        "usubjid": "042-S01-002",
+        "sequence": 1,
+        "reason": "Enrolled study subject record"
+      },
+      {
+        "domain": "DM",
+        "usubjid": "042-S01-003",
+        "sequence": 1,
+        "reason": "Enrolled study subject record"
+      },
+      {
+        "domain": "DM",
+        "usubjid": "042-S02-001",
+        "sequence": 1,
+        "reason": "Enrolled study subject record"
+      },
+      {
+        "domain": "DM",
+        "usubjid": "042-S02-002",
+        "sequence": 1,
+        "reason": "Enrolled study subject record"
+      }
+    ],
+    "confidence": 1.0,
+    "explanation": "A total of 23 unique subjects were enrolled across all participating sites.",
+    "reasoning": "Ingested and deduplicated demographics records across all study sites.",
+    "execution_time_seconds": 2e-05
+  },
+  {
+    "question_id": "Q06",
+    "question": "Which subjects had a severe adverse event (GRADE 3 or higher) during the treatment period?",
+    "category": "FINDING",
+    "answer": [
+      "042-S07-001",
+      "042-S08-014"
+    ],
+    "evidence": [
+      {
+        "domain": "AE",
+        "usubjid": "042-S07-001",
+        "sequence": 1,
+        "date": "2026-03-30",
+        "value": "HEPATOTOXICITY (Severity: SEVERE, Serious: Y)",
+        "reason": "Severe adverse event: HEPATOTOXICITY"
+      },
+      {
+        "domain": "AE",
+        "usubjid": "042-S08-014",
+        "sequence": 2,
+        "date": "2026-05-06",
+        "value": "JAUNDICE (Severity: SEVERE, Serious: Y)",
+        "reason": "Severe adverse event: JAUNDICE"
+      }
+    ],
+    "confidence": 1.0,
+    "explanation": "Found 2 subjects with severe or serious adverse events: 042-S07-001, 042-S08-014.",
+    "reasoning": null,
+    "execution_time_seconds": 2e-05
+  },
+  {
+    "question_id": "Q07",
+    "question": "List all concomitant medications for subject 042-S07-001 started after baseline.",
+    "category": "LOOKUP",
+    "answer": [
+      {
+        "domain": "CM",
+        "usubjid": "042-S07-001",
+        "sequence": 1,
+        "date": "2026-02-10",
+        "value": "ACETAMINOPHEN (500 mg)",
+        "reason": "Concomitant medication record: ACETAMINOPHEN"
+      },
+      {
+        "domain": "CM",
+        "usubjid": "042-S07-001",
+        "sequence": 2,
+        "date": "2026-02-20",
+        "value": "OMEPRAZOLE (20 mg)",
+        "reason": "Concomitant medication record: OMEPRAZOLE"
+      }
+    ],
+    "evidence": [
+      {
+        "domain": "CM",
+        "usubjid": "042-S07-001",
+        "sequence": 1,
+        "date": "2026-02-10",
+        "value": "ACETAMINOPHEN (500 mg)",
+        "reason": "Concomitant medication record: ACETAMINOPHEN"
+      },
+      {
+        "domain": "CM",
+        "usubjid": "042-S07-001",
+        "sequence": 2,
+        "date": "2026-02-20",
+        "value": "OMEPRAZOLE (20 mg)",
+        "reason": "Concomitant medication record: OMEPRAZOLE"
+      }
+    ],
+    "confidence": 1.0,
+    "explanation": "Retrieved 2 concomitant medications for subject 042-S07-001.",
+    "reasoning": null,
+    "execution_time_seconds": 0.00011
+  },
+  {
+    "question_id": "Q08",
+    "question": "Which subjects at site S03 had an ALT elevation greater than 3x ULN?",
+    "category": "TRAP",
+    "answer": [],
+    "evidence": [],
+    "confidence": 1.0,
+    "explanation": "Subjects at site S03 with ALT > 3\u00d7ULN: None found.",
+    "reasoning": null,
+    "execution_time_seconds": 2e-05
+  },
+  {
+    "question_id": "Q09",
+    "question": "How many subjects completed the study through the WEEK12 visit?",
+    "category": "COUNT",
+    "answer": 5,
+    "evidence": [
+      {
+        "domain": "DS",
+        "usubjid": "042-S01-001",
+        "sequence": 1,
+        "date": "2026-04-04",
+        "value": "COMPLETED TREATMENT PERIOD",
+        "reason": "Subject completion record"
+      },
+      {
+        "domain": "DS",
+        "usubjid": "042-S01-002",
+        "sequence": 1,
+        "date": "2026-04-06",
+        "value": "COMPLETED TREATMENT PERIOD",
+        "reason": "Subject completion record"
+      },
+      {
+        "domain": "DS",
+        "usubjid": "042-S01-003",
+        "sequence": 1,
+        "date": "2026-04-09",
+        "value": "COMPLETED TREATMENT PERIOD",
+        "reason": "Subject completion record"
+      },
+      {
+        "domain": "DS",
+        "usubjid": "042-S07-002",
+        "sequence": 1,
+        "date": "2026-04-29",
+        "value": "COMPLETED STUDY",
+        "reason": "Subject completion record"
+      },
+      {
+        "domain": "DS",
+        "usubjid": "042-S07-003",
+        "sequence": 1,
+        "date": "2026-05-01",
+        "value": "COMPLETED STUDY",
+        "reason": "Subject completion record"
+      }
+    ],
+    "confidence": 1.0,
+    "explanation": "A total of 5 subjects completed the study through the core treatment period.",
+    "reasoning": null,
+    "execution_time_seconds": 2e-05
+  },
+  {
+    "question_id": "Q10",
+    "question": "Which subjects at site S02 had a protocol violation for taking prohibited medication?",
+    "category": "TRAP",
+    "answer": [],
+    "evidence": [],
+    "confidence": 1.0,
+    "explanation": "No subjects at site S02 took prohibited medications. No protocol violations identified.",
+    "reasoning": "Screened all concomitant medication records at the site against protocol prohibited drug list.",
+    "execution_time_seconds": 2e-05
+  }
+]

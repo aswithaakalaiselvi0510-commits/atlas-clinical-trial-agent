@@ -1,0 +1,20 @@
+{
+  "nodes": 131,
+  "edges": 108,
+  "subjects": 23,
+  "subjects_covered": 23,
+  "build_time": 0.00677,
+  "build_time_seconds": 0.00677,
+  "cut": null,
+  "domains": {
+    "demographics": 23,
+    "visits": 40,
+    "labs": 25,
+    "adverse_events": 6,
+    "dosing": 13,
+    "medications": 4,
+    "medical_history": 4,
+    "disposition": 9,
+    "vital_signs": 7
+  }
+}

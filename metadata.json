@@ -1,0 +1,6 @@
+{
+  "name": "ATLAS Clinical Trial Intelligence",
+  "description": "Clinical-trial study graph, deterministic evidence-based clinical query engine, Patient 360 viewer, and study intelligence platform.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
