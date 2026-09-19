@@ -1,6 +1,7 @@
 import sys
 import json
 from stage1.atlas import StudyGraph, Atlas, Question
+from stage1.knowledge_graph import build_knowledge_graph
 
 # Global persistent study graph instance
 graph = StudyGraph("data")
@@ -60,6 +61,14 @@ def handle_request(req):
             "edges_count": graph.edges_count,
             "last_build_time": graph.build_stats.get("build_time_seconds")
         }
+
+    elif action == "knowledge_graph":
+        scope = req.get("scope", "study")
+        usubjid = req.get("usubjid", "")
+        if not graph.is_built:
+            graph.build()
+        kg = build_knowledge_graph(graph, scope=scope, usubjid=usubjid)
+        return kg
 
     else:
         return {"status": "error", "error": f"Unknown action: {action}"}

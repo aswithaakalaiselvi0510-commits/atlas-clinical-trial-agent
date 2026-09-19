@@ -213,6 +213,7 @@ export default function App() {
             onSelectSubject={(subjId) => {
               setActiveTab("patient360");
             }}
+            user={user}
           />
         )}
       </main>

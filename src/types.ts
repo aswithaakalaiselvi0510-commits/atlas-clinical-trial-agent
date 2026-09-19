@@ -86,3 +86,58 @@ export interface ChatMessage {
   modelUsed?: string;
   groundingSources?: Array<{ title?: string; uri?: string }>;
 }
+
+export interface KGNode {
+  id: string;
+  label: string;
+  category: "STUDY" | "SITE" | "ARM" | "SUBJECT" | "VISIT" | "LAB" | "AE" | "MED" | "DISP" | "CRITERION" | "EX" | string;
+  subCategory?: string;
+  val: number;
+  color: string;
+  details?: Record<string, any>;
+  x?: number;
+  y?: number;
+  vx?: number;
+  vy?: number;
+  fx?: number | null;
+  fy?: number | null;
+}
+
+export interface KGEdge {
+  id: string;
+  source: string | KGNode;
+  target: string | KGNode;
+  relationship: string;
+  isCausal: boolean;
+  severity: "NORMAL" | "WARNING" | "CRITICAL" | string;
+  label?: string;
+}
+
+export interface KGCausalChain {
+  subjectId: string;
+  title: string;
+  hops: string[];
+  summary: string;
+  evidence?: RecordRef[];
+  calculations?: {
+    trans?: string;
+    bili?: string;
+    window?: string;
+  };
+}
+
+export interface KnowledgeGraphData {
+  status: string;
+  scope: string;
+  nodes: KGNode[];
+  edges: KGEdge[];
+  causalChains: KGCausalChain[];
+  metrics: {
+    totalNodes: number;
+    totalEdges: number;
+    subjectsCovered: number;
+    hysLawCandidates: string[];
+    hysLawCandidatesCount: number;
+    causalChainsCount: number;
+  };
+}

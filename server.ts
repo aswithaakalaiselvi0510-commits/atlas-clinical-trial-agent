@@ -91,6 +91,54 @@ app.post("/api/ask", async (req, res) => {
   res.json(result);
 });
 
+// Knowledge Graph Topology & Causal Cascade Extraction
+app.get("/api/knowledge-graph", async (req, res) => {
+  const scope = (req.query.scope as string) || "study";
+  const usubjid = (req.query.usubjid as string) || "";
+  const result = await callPythonBridge({ action: "knowledge_graph", scope, usubjid });
+  res.json(result);
+});
+
+// AI Knowledge Graph Causal Narrative Synthesizer
+app.post("/api/knowledge-graph/narrative", async (req, res) => {
+  try {
+    const { causalChain, subjectId, graphMetrics } = req.body;
+    const ai = getGemini();
+    if (!ai) {
+      return res.status(503).json({
+        error: "Gemini API key is not configured.",
+      });
+    }
+
+    const systemInstruction = `You are an expert Clinical Safety Reviewer and Hepatologist evaluating Clinical Trial ATLAS-042 drug-induced liver injury (DILI) safety cascades.
+Generate a concise, high-impact clinical safety narrative based on the provided Knowledge Graph causal chain and biomarker topology.
+Structure your narrative into:
+1. Executive Safety Assessment
+2. Temporal & Causal Biomarker Trajectory (ALT/AST, BILI, ALP, Week/Visit timing)
+3. Regulatory Hy's Law Adjudication (FDA 2009 Guidance criteria conformance)
+4. Recommended Clinical & Data Management Actions`;
+
+    const prompt = `Synthesize a clinical safety adjudication narrative for the following active Knowledge Graph pathway:
+Subject ID: ${subjectId || "Study-wide Cascade"}
+Causal Chain Title: ${causalChain?.title || "Multi-Hop Safety Trajectory"}
+Causal Hops: ${JSON.stringify(causalChain?.hops || [])}
+Summary Evidence: ${causalChain?.summary || "N/A"}
+Biomarker Calculations: ${JSON.stringify(causalChain?.calculations || {})}
+Active Graph Metrics: ${JSON.stringify(graphMetrics || {})}`;
+
+    const response = await ai.models.generateContent({
+      model: "gemini-3.5-flash",
+      contents: prompt,
+      config: { systemInstruction },
+    });
+
+    res.json({ narrative: response.text });
+  } catch (error: any) {
+    console.error("Knowledge Graph narrative error:", error);
+    res.status(500).json({ error: error.message || "Failed to synthesize narrative" });
+  }
+});
+
 // AI Clinical Research Assistant (Gemini)
 app.post("/api/gemini/chat", async (req, res) => {
   try {
